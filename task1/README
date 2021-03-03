@@ -1,0 +1,257 @@
+make version: 4.2.1
+gdb version: 9.2
+gcc version: 9.3.0 
+
+Main releasing threads
+Thread 86419200 started exection
+Thread 86419200 is doing add_node, value: 2
+Thread 86419200 finished add_node, value: 2
+Thread 86419200 is doing add_node, value: 4
+Thread 86419200 finished add_node, value :4
+Thread 86419200 is doing add_node, value: 10
+Thread 107398912 started exection
+Thread 86419200 finished add_node, value :10
+Thread 99006208 started exection
+Thread 107398912 is doing add_node, value: 30
+Thread 107398912 finished add_node, value :30
+Thread 107398912 is doing add_node, value: 25
+Thread 107398912 finished add_node, value :25
+Thread 107398912 is doing add_node, value: 100
+Thread 107398912 finished add_node, value :100
+Thread 107398912 is doing sort_list
+Thread 107398912 finished sort_list
+Thread 107398912 is doing print_list
+2 4 10 25 30 100
+Thread 107398912 finished print_list
+Thread 107398912 is doing delete_node, value: 100
+Thread 107398912 finished delete_node, value: 100
+Thread 107398912 finished execution
+Thread 99006208 is doing add_node, value: 11
+Thread 99006208 finished add_node, value :11
+Thread 99006208 is doing add_node, value: 1
+Thread 99006208 finished add_node, value :1
+Thread 99006208 is doing delete_node, value: 11
+Thread 99006208 finished delete_node, value: 11
+Thread 99006208 is doing add_node, value: 8
+Thread 99006208 finished add_node, value :8
+Thread 99006208 is doing print_list
+2 4 10 25 30 1 8
+Thread 99006208 finished print_list
+Thread 99006208 finished execution
+Thread 86419200 is doing delete_node, value: 2
+Thread 86419200 finished delete_node, value: 2
+Thread 86419200 is doing sort_list
+Thread 86419200 finished sort_list
+Thread 86419200 is doing delete_node, value: 10
+Thread 86419200 finished delete_node, value: 10
+Thread 86419200 is doing delete_node, value: 5
+The value to be deleted does not exist: 5
+Thread 86419200 finished execution
+Printing list from main:
+Thread 78018368 is doing print_list
+==15877== Invalid read of size 8
+==15877==    at 0x109678: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b878 is 8 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877== Invalid read of size 4
+==15877==    at 0x1095BC: print_val (in /home/alex/task1/task1)
+==15877==    by 0x109684: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b870 is 0 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877== Invalid read of size 8
+==15877==    at 0x109689: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b880 is 16 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+2 1 4 8 25 30
+Thread 78018368 finished print_list
+
+
+==15877== Invalid read of size 8
+==15877==    at 0x109966: flush_list (in /home/alex/task1/task1)
+==15877==    by 0x1093DA: cleanup (in /home/alex/task1/task1)
+==15877==    by 0x10958C: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b880 is 16 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877== Invalid free() / delete / delete[] / realloc()
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109979: flush_list (in /home/alex/task1/task1)
+==15877==    by 0x1093DA: cleanup (in /home/alex/task1/task1)
+==15877==    by 0x10958C: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b870 is 0 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877==
+==15877== HEAP SUMMARY:
+==15877==     in use at exit: 0 bytes in 0 blocks
+==15877==   total heap usage: 13 allocs, 14 frees, 2,056 bytes allocated
+==15877==
+==15877== All heap blocks were freed -- no leaks are possible
+==15877==
+==15877== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==15877==
+==15877== 1 errors in context 1 of 5:
+==15877== Invalid free() / delete / delete[] / realloc()
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109979: flush_list (in /home/alex/task1/task1)
+==15877==    by 0x1093DA: cleanup (in /home/alex/task1/task1)
+==15877==    by 0x10958C: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b870 is 0 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877==
+==15877== 1 errors in context 2 of 5:
+==15877== Invalid read of size 8
+==15877==    at 0x109966: flush_list (in /home/alex/task1/task1)
+==15877==    by 0x1093DA: cleanup (in /home/alex/task1/task1)
+==15877==    by 0x10958C: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b880 is 16 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877==
+==15877== 1 errors in context 3 of 5:
+==15877== Invalid read of size 8
+==15877==    at 0x109689: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b880 is 16 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877==
+==15877== 1 errors in context 4 of 5:
+==15877== Invalid read of size 4
+==15877==    at 0x1095BC: print_val (in /home/alex/task1/task1)
+==15877==    by 0x109684: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b870 is 0 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877==
+==15877== 1 errors in context 5 of 5:
+==15877== Invalid read of size 8
+==15877==    at 0x109678: print_list (in /home/alex/task1/task1)
+==15877==    by 0x109574: main (in /home/alex/task1/task1)
+==15877==  Address 0x526b878 is 8 bytes inside a block of size 24 free'd
+==15877==    at 0x483CA3F: free (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x109A17: delete_node (in /home/alex/task1/task1)
+==15877==    by 0x109BA6: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==  Block was alloc'd at
+==15877==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15877==    by 0x1095EC: create_node (in /home/alex/task1/task1)
+==15877==    by 0x1096F2: add_node (in /home/alex/task1/task1)
+==15877==    by 0x109B73: first_thread_work (in /home/alex/task1/task1)
+==15877==    by 0x485B608: start_thread (pthread_create.c:477)
+==15877==    by 0x4997292: clone (clone.S:95)
+==15877==
+==15877== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+==15881== Memcheck, a memory error detector
+==15881== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==15881== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==15881== Command: ./task1
+==15881==
