@@ -45,6 +45,8 @@ struct list *add_node(struct list **head, int val)
 {
 	pthread_mutex_lock(&list_mutex);
 	struct list* new_node = create_node(val);
+	if (new_node == NULL)
+		return NULL;
 
 	printf("Thread %lu is doing add_node, value: %d\n", pthread_self(), val);
 
@@ -164,6 +166,6 @@ struct list *delete_node(struct list **head, int val)
 
 	printf("Thread %lu finished delete_node, value: %d\n", pthread_self(), val);
 	pthread_mutex_unlock(&list_mutex);
-	/* if you get here, the value does not exist. */
+
 	return *head;
 }
