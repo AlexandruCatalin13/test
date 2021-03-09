@@ -56,17 +56,14 @@ int main(int argc, char **argv)
 		}
 		
 		data = malloc(5 * sizeof(char));
-		strcpy(data, recv_buffer);
+		strncpy(data, recv_buffer, 5);
 		token = atoi(data);
 		printf("Received number %d from server\n", token);
+		free(data);
 	}
 
 	if (mq_close(client_descr) == -1) {
 		perror("mq_close() failed - client");
-		exit(-1);
-	}
-	if (mq_close(server_descr) == -1) {
-		perror("mq_close() failed - server");
 		exit(-1);
 	}
 

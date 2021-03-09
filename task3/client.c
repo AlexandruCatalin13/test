@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 	for (i = 1; i < argc; i++) {
 
 		memset(buffer, 0, MAX_BUFFER_SIZE);
-		sprintf(buffer, "%s", argv[i]);
+		snprintf(buffer, MAX_BUFFER_SIZE, "%s", argv[i]);
 
 		printf("Writing %s\n", buffer);
 
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
 		}
 		
 		memset(file_to_write, 0, MAX_BUFFER_SIZE);
-		sprintf(file_to_write, "%s%s", CLIENT_FILES, argv[i]);
+		snprintf(file_to_write, MAX_BUFFER_SIZE, "%s%s", CLIENT_FILES, argv[i]);
 
 		printf("Data to be written at: %s\n", file_to_write);
 

@@ -6,4 +6,4 @@ DEPS = list.h thread_work.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 build: *.o 
-	$(CC) -o task1 *.o $(CFLAGS)
+	$(CC) -g -o task1 *.o $(CFLAGS)
